@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="./asset/image/logo_LTD.png" type="image/x-icon" />
+    <title>Crm Admintrator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- google font lato  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font Oswald-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- main.css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <span class="firstText">c</span>rm
+            <span class="firstText">a</span>dminstrator</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="header"></div>
+      <section class="tableProductMn">
+        <div class="titleTable">
+          <h3 class="mnProduct">bảng kho sản phẩm</h3>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>id Product</th>
+              <th>Product Name</th>
+              <th>Brand</th>
+              <th>Price</th>
+              <th>image</th>
+              <th>Số Lượng</th>
+              <th>Tính năng</th>
+            </tr>
+          </thead>
+          <tbody id="tableProductMn"></tbody>
+        </table>
+        <div class="buttonInputProduct">
+          <button
+            class="btn inputNewProuduct"
+            type="button"
+            onclick="addProductBtn()"
+          >
+            Thêm Sản phẩm
+          </button>
+        </div>
+      </section>
+      <!-- bảng nhập sản phẩm mới -->
+      <div class="inputProductInfo" id="inputProductInfo">
+        <!-- close button  -->
+        <div class="buttonCloseInput">
+          <button class="item-1" onclick="closeInput()">
+            <span class="inner">
+              <span class="label">Close</span>
+            </span>
+          </button>
+        </div>
+        <!-- form input new product  -->
+        <div class="contentInputProduct">
+          <h4>thông tin sản phẩm mới</h4>
+          <div class="formInput">
+            <!-- PRODUCT NAME -->
+            <div class="mb-3  formInputTitle">
+              <label for="proDuctName" class="form-label">Product Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="proDuctName"
+                placeholder="Brand + Name of Product"
+              />
+            </div>
+            <!-- PRICE OF PRODUCT -->
+            <div class="mb-3  formInputTitle ">
+              <label for="priceOfProduct" class="form-label">Price</label>
+              <input
+                type="text"
+                class="form-control"
+                name="priceOfProduct"
+                id="priceOfProduct"
+                placeholder="Brand + Name of Product"
+              />
+            </div>
+            <!-- type of Product -->
+            <div class="mb-3  formInputTitle">
+              <label for="typeProduct" class="form-label">Type</label>
+              <select
+                class="form-select form-select-lg"
+                name="typeProduct"
+                id="typeProduct"
+              >
+                <option selected>Select one</option>
+                <option value="1">Samsung</option>
+                <option value="2">Apple</option>
+                <option value="3">more brand</option>
+              </select>
+            </div>
+   
+            <!-- Image Input link -->
+            <div class="mb-3  formInputTitle">
+              <label for="linkImageProduct" class="form-label">Link image</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="linkImageProduct"
+                placeholder="Brand + Name of Product"
+              />
+            </div>
+            <!-- count number product -->
+            <div class="mb-3  formInputTitle">
+              <label for="countOfProduct" class="form-label"
+                >Count of Product</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                name="countOfProduct"
+                id="countOfProduct"
+                placeholder=""
+              />
+            </div>
+            <div class="mb-3  formInputTitle">
+              <label for="descriptionOfProduct" class="form-label">Descripttion</label>
+              <input
+                type="text"
+                class="form-control"
+                name="descriptionOfProduct"
+                id="descriptionOfProduct"
+                placeholder="Brand + Name of Product"
+              />
+            </div>
+          </div>
+          <div class="buttonConfirm">
+            <button class="btn buttonAccept btn-success" onclick="createProduct()">Accept</button>
+            <button class="btn buttonCancel btn-danger" onclick="">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- axios script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.6/axios.min.js"
+      integrity="sha512-CmAbe9oceGW5QqQ3m4+xHwUEILjqe3qxPkgdAsGL6mTDSqNcnoHDDdl+rZTwibMlnw0Sqf3IRvfsKNfIKqX/8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- axios function  -->
+    <script src="./asset/javascript/index.js"></script>
+    <!--function of crmadmin-->
+    <script src="./asset/javascript/index1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+.buttonInputProduct {
+  background-color: white;
+  text-align: center;
+  .inputNewProuduct {
+    text-align: center;
+    background-color: $color-hover-1;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 40px 0;
+    font-weight: $fw-3;
+    color: white;
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+    &:hover {
+      background-color: $color-bg-3;
+      color: $color-footer-1;
+    }
+  }
+}
+
+[class^="item"]{
+    text-decoration: none;
+    margin-right: 20px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+    .item-1 {
+      height: 50px;
+      .inner {
+        display: block;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &:before {
+          content: "";
+          position: absolute;
+          height: 4px;
+          width: 50px;
+          border-radius: 4px;
+          background-color: #FFF;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          transition: ease-out .2s all;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          height: 4px;
+          width: 50px;
+          border-radius: 4px;
+          background-color: #FFF;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          transition: ease-out .2s all;
+        }
+      }
+      .label {
+        color: #FFF;
+        opacity: 0;
+        transition: all .2s ease-out;
+      }
+      &:hover,
+      &:focus {
+        .inner {
+          &:before {
+            transform: translate(-50%, 0%) rotate(0);
+            top: 25%;
+          }
+          &:after {
+            transform: translate(-50%, 0%) rotate(0);
+            top: 76%;
+          }
+        }
+        .label {
+          opacity: 1;
+        }
+      }
+    }
+    .inputProductInfo{
+        position: relative;
+        .buttonCloseInput{
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+    }

@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+.buttonInputProduct {
+  background-color: white;
+  text-align: center;
+}
+.buttonInputProduct .inputNewProuduct {
+  text-align: center;
+  background-color: #FF7315;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 40px 0;
+  font-weight: 700;
+  color: white;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.buttonInputProduct .inputNewProuduct:hover {
+  background-color: #FFC107;
+  color: #a09292;
+}
+
+[class^=item] {
+  text-decoration: none;
+  margin-right: 20px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+[class^=item]:last-child {
+  margin-right: 0;
+}
+
+.item-1 {
+  height: 50px;
+}
+.item-1 .inner {
+  display: block;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.item-1 .inner:before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 50px;
+  border-radius: 4px;
+  background-color: #FFF;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: ease-out 0.2s all;
+}
+.item-1 .inner:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 50px;
+  border-radius: 4px;
+  background-color: #FFF;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: ease-out 0.2s all;
+}
+.item-1 .label {
+  color: #FFF;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.item-1:hover .inner:before, .item-1:focus .inner:before {
+  transform: translate(-50%, 0%) rotate(0);
+  top: 25%;
+}
+.item-1:hover .inner:after, .item-1:focus .inner:after {
+  transform: translate(-50%, 0%) rotate(0);
+  top: 76%;
+}
+.item-1:hover .label, .item-1:focus .label {
+  opacity: 1;
+}
+
+.inputProductInfo {
+  position: relative;
+}
+.inputProductInfo .buttonCloseInput {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.inputProductInfo {
+  opacity: 0;
+  visibility: hidden;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  top: 0px;
+  left: 0;
+  background-color: rgba(38, 38, 38, 0.9);
+  transform: translateX(-50px);
+  transition: all 0.5s;
+}
+.inputProductInfo .contentInputProduct {
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1B1818;
+}
+.inputProductInfo .contentInputProduct h4 {
+  text-transform: uppercase;
+  font-size: 38px;
+  font-weight: 900;
+  color: #D1D3D1;
+}
+.inputProductInfo .contentInputProduct .formInput .formInputTitle .form-label {
+  font-size: 16px !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #D1D3D1 !important;
+}
+
+.show {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: unset;
+}
+
+header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+header .bg-body-tertiary {
+  height: 70px;
+  background-color: #222222 !important;
+}
+header .bg-body-tertiary .container-fluid .navbar-brand {
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+header .bg-body-tertiary .container-fluid .navbar-brand .firstText {
+  font-size: 26px;
+  color: #C58C37;
+}
+header .bg-body-tertiary .container-fluid .navbar-toggler {
+  background-color: #D1D3D1 !important;
+}
+
+main .header {
+  height: 70px;
+}
+
+main .tableProductMn {
+  background-color: #1B1818;
+}
+main .tableProductMn .titleTable .mnProduct {
+  padding: 20px 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #D1D3D1;
+}
+main .tableProductMn .table {
+  padding: 0 40px;
+  margin: 0;
+}/*# sourceMappingURL=main.css.map */
