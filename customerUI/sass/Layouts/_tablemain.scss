@@ -1,0 +1,18 @@
+main{
+    .tableProductMn{
+        background-color: $color-bg-2;
+        .titleTable{
+            .mnProduct{
+                padding: 20px 0;
+                text-transform: uppercase;
+                text-align: center;
+                color: $color-title-2;
+            }
+        }
+        .table{
+            padding: 0 40px;
+            margin: 0;
+        }
+    }
+
+}

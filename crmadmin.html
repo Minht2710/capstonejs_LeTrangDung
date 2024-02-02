@@ -188,25 +188,27 @@
             <div class="mb-3  formInputTitle ">
               <label for="priceOfProduct" class="form-label">Price</label>
               <input
-                type="text"
+                type="number"
                 class="form-control"
                 name="priceOfProduct"
                 id="priceOfProduct"
                 placeholder="Brand + Name of Product"
               />
             </div>
-            <!-- type of Product -->
+            <!-- type of Pro  duct -->
             <div class="mb-3  formInputTitle">
               <label for="typeProduct" class="form-label">Type</label>
               <select
                 class="form-select form-select-lg"
-                name="typeProduct"
+                name="typeProduct"  
                 id="typeProduct"
               >
                 <option selected>Select one</option>
-                <option value="1">Samsung</option>
-                <option value="2">Apple</option>
-                <option value="3">more brand</option>
+                <option value="1">Samsung Mobie</option>
+                <option value="2">Samsung Tablet</option>
+                <option value="3">Samsung Watch</option>
+                <option value="4">Samsung Buds</option>
+                <option value="5">Samsung Accessory</option>
               </select>
             </div>
    
@@ -248,6 +250,7 @@
           <div class="buttonConfirm">
             <button class="btn buttonAccept btn-success" onclick="createProduct()">Accept</button>
             <button class="btn buttonCancel btn-danger" onclick="">Cancel</button>
+            <button class="btn btn-primary" onclick="updateProduct()">Update</button>
           </div>
         </div>
       </div>

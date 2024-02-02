@@ -92,3 +92,33 @@
             right: 50px;
         }
     }
+
+
+    // select button memory productBox
+    .btnMemory{
+      padding: 5px 10px;
+      border: 2px solid $color-title-4;
+      border-radius: 20px;
+      background-color: transparent;
+      color: $color-title-4;
+      font-weight: $fw-3;
+      margin: 5px 10px 15px 0;
+      &.selected{
+        border: 2px dotted $color-title-4;
+      }
+    }
+// thêm vào giỏ 
+.productItemPrice{
+  .btnAddToCart{
+    border: 2px solid $color-bg-1;
+    background-color: $color-bg-1;
+    color: $color-title-3;
+    transition: all 0.5s;
+    &:hover{
+      border: 2px dotted $color-bg-1;
+      color: $color-title-4;
+      background-color: $color-bg-4;
+    }
+  }
+
+}

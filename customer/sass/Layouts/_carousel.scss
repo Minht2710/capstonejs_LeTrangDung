@@ -1,11 +1,97 @@
 main{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
     .carousel{
-        height: 100vh;
-        width: 100%;
-        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        .bgCarousel{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            #background-video{
+                width: 100%;
+            }
+            .progress-bar {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                background-color: $color-title-2;
+                width: 100%;
+                transform-origin: left center;
+                transform: scaleX(0);
+                height: 3px;
+                will-change: transform;
+            }
+              
+        }
+        .overlayCarousel{
+            background-color: $color-bg-6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            .bgOrder{
+                height: 100%;
+                background-color: $color-bg-5;
+                padding: 30vh 40px ;
+                position: absolute;
+                z-index: 100;
+                right: 0;
+                top:0;
+                text-align: right;
+                h2{
+                    color: $color-title-3;
+                    font-size: $fs-8;
+                    font-weight: $fw-3;
+                }
+                p{
+                    color: $color-title-3;
+                    font-size: $fs-4;
+                    padding: 20px 0;
+                }
+                #countdown{
+                    font-size: $fs-10;
+                    color: $color-title-3;
+                    font-weight: $fw-3;
+                }
+                .btnFunction{
+                    a{
+                        text-decoration: none;
+                        padding: 10px 20px;
+                        margin: 10px;
+                        border-radius: 20px;
+                        transition: all 0.5s;
+                        border: none;
+                        font-weight: $fw-3;
+                        &:first-child{
+                            color: $color-title-4;
+                                background-color: $color-bg-4;
+                                &:hover{
+                                    border: 2px solid $color-title-2;
+                                    background-color: transparent;
+                                    color: $color-title-3;
+                                }
+                                
+
+                            }
+                        &:last-child{
+                            color: $color-title-3;
+                            border-bottom: 3px solid $color-title-3;
+                            &:hover{
+                                color: $color-title-4;
+                                background-color: $color-bg-4;
+                                border: none;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+        }
     }
 }

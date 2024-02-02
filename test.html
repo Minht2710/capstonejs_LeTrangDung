@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer UI</title>
+  <style>
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .add-to-cart {
+      color: blue;
+      cursor: pointer;
+    }
+
+    #tableProductMn {
+      /* Add any styling for the container if needed */
+    }
+  </style>
+</head>
+<body>
+
+  <div id="tableProductMn"></div>
+
+  <script>
+    // Paste your JavaScript code here...
+    function showProductDetails(item) {
+        console.log("Chi tiết sản phẩm", item); // Replace with your logic to show product details
+    }
+
+    function addToCart(element) {
+        // Replace with your logic to add the product to the cart
+        console.log("Add to Cart clicked", element);
+    }
+
+    // Sample product data
+    var sampleProducts = [
+      { productName: "Product 1", type: "Type A", price: 10.99 },
+      { productName: "Product 2", type: "Type B", price: 19.99 },
+      // Add more sample products as needed
+    ];
+
+    // Call the render function with the sample data
+    renderCustomerUI(sampleProducts);
+
+    function renderCustomerUI(productArr) {
+      var contentHTML = "";
+      productArr.forEach(function (item) {
+        var trString = `
+          <div class="product" onclick="showProductDetails(this)">
+            <h3>${item.productName}</h3>
+            <p>${item.type}</p>
+            <h1>${item.price}</h1>
+            <span class="add-to-cart" onclick="addToCart(this)">Add to Cart</span>
+          </div>`;
+        contentHTML += trString;
+      });
+      document.getElementById("tableProductMn").innerHTML = contentHTML;
+    }
+  </script>
+
+</body>
+</html>

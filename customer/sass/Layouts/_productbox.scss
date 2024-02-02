@@ -1,0 +1,55 @@
+.productBox{
+    background-color: $color-title-3;
+    .productBoxTitle{
+        position: relative;
+        video{
+            width: 100%;
+        }
+        .textTitle{
+            position:absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            h3,span{
+                font-family: 'Great Vibes', cursive;
+                font-size: $fs-9;
+            }
+        
+        }
+    }
+    .productBoxContent{
+        .productItem{
+            margin: 0 20px;
+            height: 360px;
+            padding: 20px;
+            background-color: $color-bg-8;
+            overflow: hidden;
+            border-radius: 20px;
+            transition: all 0.5s;
+            img{
+                width: 100%;
+            }
+            h4{
+                font-weight: $fw-3;
+                margin: 30px 0 0 0;
+                text-align: center;
+                text-transform: capitalize;
+            }
+            .productItemPrice{
+                text-align: center;
+                margin: 15px 0 20px;
+
+                p{
+                    font-size: $fs-7;
+                    font-weight: $fw-3;
+                    text-align: center;
+                }
+            }
+            &:hover{
+                height: 500px;
+            }
+            
+        }
+    }
+    
+}

@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+.container .productItem {
+  width: 300px;
+}
+.container .productItem .imgProduct {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.container .productItem .imgProduct img {
+  width: 100%;
+}/*# sourceMappingURL=maintest.css.map */

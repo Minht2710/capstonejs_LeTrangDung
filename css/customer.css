@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -102,6 +103,31 @@ html, body {
   right: 50px;
 }
 
+.btnMemory {
+  padding: 5px 10px;
+  border: 2px solid #0E0E0E;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #0E0E0E;
+  font-weight: 700;
+  margin: 5px 10px 15px 0;
+}
+.btnMemory.selected {
+  border: 2px dotted #0E0E0E;
+}
+
+.productItemPrice .btnAddToCart {
+  border: 2px solid #222222;
+  background-color: #222222;
+  color: #F5F4F6;
+  transition: all 0.5s;
+}
+.productItemPrice .btnAddToCart:hover {
+  border: 2px dotted #222222;
+  color: #0E0E0E;
+  background-color: #D1D3D1;
+}
+
 .inputProductInfo {
   opacity: 0;
   visibility: hidden;
@@ -111,7 +137,7 @@ html, body {
   z-index: 1000;
   top: 0px;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.877);
+  background-color: rgba(0, 0, 0, 0.432);
   transform: translateX(-50px);
   transition: all 0.5s;
 }
@@ -145,7 +171,12 @@ html, body {
 }
 
 header .bg-body-tertiary {
-  background-color: rgba(0, 0, 0, 0.877) !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.89) !important;
 }
 header .bg-body-tertiary .container-fluid {
   padding: 0 40px;
@@ -170,17 +201,19 @@ header .bg-body-tertiary .container-fluid .searchProduct .inputSearch::after {
   position: absolute;
   bottom: 2px;
   left: 100%;
-  transition: all 3s;
+  opacity: 0;
+  transition: all 0.5s;
   transform: translateX(-100%);
 }
-header .bg-body-tertiary .container-fluid .searchProduct .inputSearch .searchProduct1 {
+header .bg-body-tertiary .container-fluid .searchProduct .searchProduct1 {
   color: #D1D3D1;
   background-color: transparent;
   border: none;
   outline: none;
   width: 100%;
 }
-header .bg-body-tertiary .container-fluid .searchProduct .inputSearch .searchProduct1:hover ~ .inputSearch::after, header .bg-body-tertiary .container-fluid .searchProduct .inputSearch .searchProduct1:focus ~ .inputSearch::after {
+header .bg-body-tertiary .container-fluid .searchProduct .searchProduct1:hover ~ .inputSearch::after, header .bg-body-tertiary .container-fluid .searchProduct .searchProduct1:focus ~ .inputSearch::after {
+  opacity: 1; /* Đặt opacity thành 1 khi hover hoặc focus */
   transform: translateX(0);
 }
 header .bg-body-tertiary .container-fluid .searchProduct .btnSearch {
@@ -189,16 +222,93 @@ header .bg-body-tertiary .container-fluid .searchProduct .btnSearch {
   color: #D1D3D1;
 }
 
-main {
+main .carousel {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+main .carousel .bgCarousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+main .carousel .bgCarousel #background-video {
+  width: 100%;
+}
+main .carousel .bgCarousel .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: #D1D3D1;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  height: 3px;
+  will-change: transform;
+}
+main .carousel .overlayCarousel {
+  background-color: rgba(0, 0, 0, 0.159);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
-}
-main .carousel {
-  height: 100vh;
+  z-index: 1;
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+}
+main .carousel .overlayCarousel .bgOrder {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.432);
+  padding: 30vh 40px;
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  top: 0;
+  text-align: right;
+}
+main .carousel .overlayCarousel .bgOrder h2 {
+  color: #F5F4F6;
+  font-size: 38px;
+  font-weight: 700;
+}
+main .carousel .overlayCarousel .bgOrder p {
+  color: #F5F4F6;
+  font-size: 16px;
+  padding: 20px 0;
+}
+main .carousel .overlayCarousel .bgOrder #countdown {
+  font-size: 80px;
+  color: #F5F4F6;
+  font-weight: 700;
+}
+main .carousel .overlayCarousel .bgOrder .btnFunction a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  transition: all 0.5s;
+  border: none;
+  font-weight: 700;
+}
+main .carousel .overlayCarousel .bgOrder .btnFunction a:first-child {
+  color: #0E0E0E;
+  background-color: #D1D3D1;
+}
+main .carousel .overlayCarousel .bgOrder .btnFunction a:first-child:hover {
+  border: 2px solid #D1D3D1;
+  background-color: transparent;
+  color: #F5F4F6;
+}
+main .carousel .overlayCarousel .bgOrder .btnFunction a:last-child {
+  color: #F5F4F6;
+  border-bottom: 3px solid #F5F4F6;
+}
+main .carousel .overlayCarousel .bgOrder .btnFunction a:last-child:hover {
+  color: #0E0E0E;
+  background-color: #D1D3D1;
+  border: none;
 }
 
 main .tableProductMn {
@@ -213,4 +323,54 @@ main .tableProductMn .titleTable .mnProduct {
 main .tableProductMn .table {
   padding: 0 40px;
   margin: 0;
+}
+
+.productBox {
+  background-color: #F5F4F6;
+}
+.productBox .productBoxTitle {
+  position: relative;
+}
+.productBox .productBoxTitle video {
+  width: 100%;
+}
+.productBox .productBoxTitle .textTitle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.productBox .productBoxTitle .textTitle h3, .productBox .productBoxTitle .textTitle span {
+  font-family: "Great Vibes", cursive;
+  font-size: 56px;
+}
+.productBox .productBoxContent .productItem {
+  margin: 0 20px;
+  height: 360px;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.productBox .productBoxContent .productItem img {
+  width: 100%;
+}
+.productBox .productBoxContent .productItem h4 {
+  font-weight: 700;
+  margin: 30px 0 0 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+.productBox .productBoxContent .productItem .productItemPrice {
+  text-align: center;
+  margin: 15px 0 20px;
+}
+.productBox .productBoxContent .productItem .productItemPrice p {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+.productBox .productBoxContent .productItem:hover {
+  height: 500px;
 }/*# sourceMappingURL=customer.css.map */
