@@ -17,6 +17,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- google font banger  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
     <!-- google font greate vibes  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +32,13 @@
       rel="stylesheet"
     />
     <!-- add font: font-family: 'Great Vibes', cursive;  -->
+    <!-- google font Oswald -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap CSS v5.2.1 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -53,7 +67,6 @@
           <!-- tìm kiếm  -->
           <div class="searchProduct d-flex align-items-center">
             <div class="inputSearch">
-              <div id="searchResults"></div>
               <input
                 name="searching"
                 type="text"
@@ -75,28 +88,110 @@
       </nav>
     </header>
     <main>
+      <!-- CAROUSEL  -->
       <section class="carousel">
-        <div class="bgCarousel">
-          <video id="background-video" autoplay muted>
-            <source src="./customer/image/galaxys24ultra.mp4" />
-          </video>
-          <span class="progress-bar" id="progressBar"></span>
-        </div>
-        <div class="overlayCarousel">
-          <div class="bgOrder wow animate__fadeIn">
-            <h2>Galaxy S24 Ultra</h2>
-            <p class="homeCarousel">
-              Ưu đãi nâng cấp dung lượng lên đến 7 triệu.Thu cũ đổi mới hỗ trợ
-              thêm 2 triệu
-            </p>
-            <span id="countdown">00:00:00:00</span>
-            <div class="btnFunction">
-              <a type="button" href="#">Đặt hàng ngay</a>
-              <a type="button" href="#">Tìm Hiểu thêm</a>
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- galaxy s24 introdution -->
+            <div class="carousel-item active">
+              <div class="bgCarousel">
+                <video class="background-video" id="background-video" autoplay muted>
+                  <source src="./customer/image/galaxys24ultra.mp4" />
+                </video>
+                <span class="progress-bar" id="progressBar"></span>
+              </div>
+              <div class="overlayCarousel">
+                <div class="bgOrder wow animate__fadeIn">
+                  <h2>Galaxy S24 Ultra</h2>
+                  <p class="homeCarousel">
+                    Ưu đãi nâng cấp dung lượng lên đến 7 triệu.Thu cũ đổi mới hỗ
+                    trợ thêm 2 triệu
+                  </p>
+                  <span id="countdown">00:00:00:00</span>
+                  <div class="btnFunction">
+                    <a type="button" href="#">Đặt hàng ngay</a>
+                    <a type="button" href="#">Tìm Hiểu thêm</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- galaxy z flip -->
+            <div class="carousel-item">
+              <div class="bgCarousel">
+                <video class="background-video" id="background-video" autoplay muted>
+                  <source
+                    src="./customer/image/galaxy-tab-s9-display-pc.webm"
+                  />
+                </video>
+                <span class="progress-bar" id="progressBar"></span>
+                <div class="galaxyTabS">
+                  <h2>Màn hình lớn giúp <br />tối ưu hóa việc ghi chú</h2>
+                  <span>Galaxy Tab S9 series</span>
+                </div>
+                <div class="goodnotes">
+                  <img
+                    src="./customer/image/galaxy-tab-s9-goodnotes-white.webp"
+                    alt=""
+                  />
+                  <div class="titleGoodNotes">
+                    <div class="smallTitle">
+                      <small>GOODNOTES</small>
+                      <h6>Nhận 1 năm miễn phí phiên bản đầy đủ</h6>
+                    </div>
+                    <p>
+                      Hãy để trí tưởng tượng của bạn bay xa với các ứng dụng
+                      sáng tạo chuyên nghiệp như GoodNotes —được tối ưu hóa
+                      cho S Pen mang lại trải nghiệm liền mạch và cảm giác như
+                      viết trên giấy thực.26 Phác thảo trong chế độ xem dọc và
+                      chỉnh sửa trong chế độ xem ngang hoặc ngược lại.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- galaxy watch 6 -->
+            <div class="carousel-item">
+              <div class="bgCarousel">
+                <video class="background-video" id="background-video" autoplay muted>
+                  <source src="./customer/image/galaxy-watch6-screen-pc.webm" />
+                </video>
+                <span class="progress-bar" id="progressBar"></span>
+              </div>
+              <div class="galaxyWatchTitle">
+                <h2>Galaxy watch 6</h2>
+                <div class="btnFunction">
+                  <a type="button" href="#">Mua Ngay</a>
+                  <a type="button" href="#">Tìm Hiểu thêm</a>
+                </div>
+              </div>
             </div>
           </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+        <!-- bg video -->
       </section>
+      <!-- PRODUCTBOX -->
       <section class="productBox py-5">
         <div class="container">
           <div class="productBoxTitle">
@@ -109,30 +204,15 @@
             </div>
           </div>
           <!-- mobile -->
-          <div class="productBoxContent py-5" id="productBoxMobie">
-            
-            
-          </div>
+          <div class="productBoxContent py-5" id="productBoxMobie"></div>
           <!-- tablet -->
-          <div class="productBoxContent py-5" id="productBoxTablet">
-            
-            
-          </div>
+          <div class="productBoxContent py-5" id="productBoxTablet"></div>
           <!-- watch -->
-          <div class="productBoxContent py-5" id="productBoxWatch">
-            
-            
-          </div>
+          <div class="productBoxContent py-5" id="productBoxWatch"></div>
           <!-- buds -->
-          <div class="productBoxContent py-5" id="productBoxBuds">
-            
-            
-          </div>
+          <div class="productBoxContent py-5" id="productBoxBuds"></div>
           <!-- accessory  -->
-          <div class="productBoxContent py-5" id="productBoxAccessory">
-            
-            
-          </div>
+          <div class="productBoxContent py-5" id="productBoxAccessory"></div>
         </div>
       </section>
     </main>
@@ -196,6 +276,3 @@
     <script src="./customer/javascript/tlvideo.js"></script>
   </body>
 </html>
-
-
-

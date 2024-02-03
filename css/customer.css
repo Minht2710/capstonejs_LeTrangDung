@@ -228,16 +228,16 @@ main .carousel {
   left: 0;
   z-index: 0;
 }
-main .carousel .bgCarousel {
+main .carousel .carousel-inner .carousel-item:first-child .bgCarousel {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-main .carousel .bgCarousel #background-video {
+main .carousel .carousel-inner .carousel-item:first-child .bgCarousel .background-video {
   width: 100%;
 }
-main .carousel .bgCarousel .progress-bar {
+main .carousel .carousel-inner .carousel-item:first-child .bgCarousel .progress-bar {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -249,7 +249,7 @@ main .carousel .bgCarousel .progress-bar {
   height: 3px;
   will-change: transform;
 }
-main .carousel .overlayCarousel {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel {
   background-color: rgba(0, 0, 0, 0.159);
   position: absolute;
   top: 0;
@@ -258,7 +258,7 @@ main .carousel .overlayCarousel {
   width: 100%;
   height: 100%;
 }
-main .carousel .overlayCarousel .bgOrder {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel .bgOrder {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.432);
   padding: 30vh 40px;
@@ -268,22 +268,22 @@ main .carousel .overlayCarousel .bgOrder {
   top: 0;
   text-align: right;
 }
-main .carousel .overlayCarousel .bgOrder h2 {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel .bgOrder h2 {
   color: #F5F4F6;
   font-size: 38px;
   font-weight: 700;
 }
-main .carousel .overlayCarousel .bgOrder p {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel .bgOrder p {
   color: #F5F4F6;
   font-size: 16px;
   padding: 20px 0;
 }
-main .carousel .overlayCarousel .bgOrder #countdown {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel .bgOrder #countdown {
   font-size: 80px;
   color: #F5F4F6;
   font-weight: 700;
 }
-main .carousel .overlayCarousel .bgOrder .btnFunction a {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel .bgOrder .btnFunction a {
   text-decoration: none;
   padding: 10px 20px;
   margin: 10px;
@@ -292,23 +292,142 @@ main .carousel .overlayCarousel .bgOrder .btnFunction a {
   border: none;
   font-weight: 700;
 }
-main .carousel .overlayCarousel .bgOrder .btnFunction a:first-child {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel .bgOrder .btnFunction a:first-child {
   color: #0E0E0E;
   background-color: #D1D3D1;
 }
-main .carousel .overlayCarousel .bgOrder .btnFunction a:first-child:hover {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel .bgOrder .btnFunction a:first-child:hover {
   border: 2px solid #D1D3D1;
   background-color: transparent;
   color: #F5F4F6;
 }
-main .carousel .overlayCarousel .bgOrder .btnFunction a:last-child {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel .bgOrder .btnFunction a:last-child {
   color: #F5F4F6;
   border-bottom: 3px solid #F5F4F6;
 }
-main .carousel .overlayCarousel .bgOrder .btnFunction a:last-child:hover {
+main .carousel .carousel-inner .carousel-item:first-child .overlayCarousel .bgOrder .btnFunction a:last-child:hover {
   color: #0E0E0E;
   background-color: #D1D3D1;
   border: none;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .background-video {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: #D1D3D1;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  height: 3px;
+  will-change: transform;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .galaxyTabS {
+  position: absolute;
+  width: 700px;
+  top: 70px;
+  right: 0;
+  padding: 40px;
+  text-align: right;
+  font-family: "Oswald", sans-serif;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .galaxyTabS h2 {
+  font-size: 56px;
+  font-weight: 900;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .galaxyTabS span {
+  font-size: 26px;
+  font-weight: 700;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .goodnotes {
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  width: 300px;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .goodnotes .titleGoodNotes {
+  position: relative;
+  padding: 5px 0 0 20px;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .goodnotes .titleGoodNotes .smallTitle small {
+  padding: 10px 20px;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .goodnotes .titleGoodNotes .smallTitle h6 {
+  padding: 5px 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .goodnotes .titleGoodNotes .smallTitle::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: red;
+  height: 50px;
+  width: 2px;
+}
+main .carousel .carousel-inner .carousel-item:nth-child(2) .bgCarousel .goodnotes .titleGoodNotes p {
+  font-size: 14px;
+}
+main .carousel .carousel-inner .carousel-item:last-child .bgCarousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+main .carousel .carousel-inner .carousel-item:last-child .bgCarousel .background-video {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+main .carousel .carousel-inner .carousel-item:last-child .bgCarousel .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: #D1D3D1;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  height: 3px;
+  will-change: transform;
+}
+main .carousel .carousel-inner .carousel-item:last-child .galaxyWatchTitle {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+main .carousel .carousel-inner .carousel-item:last-child .galaxyWatchTitle h2 {
+  font-size: 56px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: "Bangers", system-ui;
+}
+main .carousel .carousel-inner .carousel-item:last-child .galaxyWatchTitle .btnFunction {
+  font-family: "Bangers", system-ui;
+}
+main .carousel .carousel-inner .carousel-item:last-child .galaxyWatchTitle .btnFunction a {
+  text-decoration: none;
+  color: #325B53;
+  margin: 0 10px;
+  transition: all 0.5s;
+}
+main .carousel .carousel-inner .carousel-item:last-child .galaxyWatchTitle .btnFunction a:hover {
+  color: #B5D8D4;
 }
 
 main .tableProductMn {
@@ -343,6 +462,9 @@ main .tableProductMn .table {
 .productBox .productBoxTitle .textTitle h3, .productBox .productBoxTitle .textTitle span {
   font-family: "Great Vibes", cursive;
   font-size: 56px;
+}
+.productBox .productBoxContent {
+  display: flex;
 }
 .productBox .productBoxContent .productItem {
   margin: 0 20px;

@@ -71,8 +71,8 @@ function btnMemorySelected(){
 // add to cart
   function addToCart() {
     var productName = document.getElementById('productName').innerText;
-    var productPrice = document.getElementById('productPrice').innerText;
-    var productImage = document.getElementById('productImage').src;
+    var productPrice = document.getElementById('priceProduct').innerText;
+    var productImage = document.getElementById('imageProduct').src;
 
     // Tạo đối tượng sản phẩm
     var product = {
