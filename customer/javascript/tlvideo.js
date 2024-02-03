@@ -80,28 +80,7 @@ function btnMemorySelected(){
       price: productPrice,
       image: productImage,
     };
-
-    // Lấy giỏ hàng từ Local Storage
-    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Thêm sản phẩm vào giỏ hàng
-    cartItems.push(product);
-
-    // Lưu giỏ hàng mới vào Local Storage
-    localStorage.setItem('cart', JSON.stringify(cartItems));
-
-    // Cập nhật hiển thị giỏ hàng (có thể gọi hàm hiển thị giỏ hàng ở đây)
-    updateCartDisplay();
-  }
-
-  // Hàm cập nhật hiển thị giỏ hàng
-  function updateCartDisplay() {
-    // Code để cập nhật hiển thị giỏ hàng ở đây
-    // Ví dụ: hiển thị số lượng sản phẩm trong giỏ hàng
-    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    var cartCount = cartItems.length;
-
-    document.getElementById('cartCount').innerText = 'Cart Count: ' + cartCount;
+    var dataJson
   }
 
 
@@ -109,20 +88,4 @@ function btnMemorySelected(){
 
 
 
-    // Hàm cập nhật hiển thị giỏ hàng trong offcanvas
-    function updateCartDisplay() {
-      var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-      var offCanvasBody = document.getElementById('offCanvasBody');
-      offCanvasBody.innerHTML = '';
-  
-      cartItems.forEach(function(item) {
-        var cartItem = ``;
-        cartItem.innerHTML = `<div>
-        <img src="${item.image}" alt="Product Image">
-        <p>${item.name} - ${item.price}</p>
-        </div>
-        `;
-        offCanvasBody.appendChild(cartItem);
-      });
-    }
-  
+
