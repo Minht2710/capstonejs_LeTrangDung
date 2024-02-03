@@ -122,3 +122,21 @@
   }
 
 }
+
+.btnCart{
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 0;
+  border: none;
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 100px;
+  left: 0;
+  z-index: 1000;
+  background-color: $color-bg-2;
+  color: $color-title-3;
+  transform: rotate(90deg) translateY(50px);
+  }
+  

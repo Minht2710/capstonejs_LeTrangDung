@@ -128,6 +128,23 @@ html, body {
   background-color: #D1D3D1;
 }
 
+.btnCart {
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 0;
+  border: none;
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 100px;
+  left: 0;
+  z-index: 1000;
+  background-color: #1B1818;
+  color: #F5F4F6;
+  transform: rotate(90deg) translateY(50px);
+}
+
 .inputProductInfo {
   opacity: 0;
   visibility: hidden;
@@ -495,4 +512,73 @@ main .tableProductMn .table {
 }
 .productBox .productBoxContent .productItem:hover {
   height: 500px;
+}
+
+.offcanvas .offcanvas-header .offcanvas-title {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.offcanvas .offcanvas-body {
+  position: relative;
+}
+.offcanvas .offcanvas-body .offCanvasItem .gioHang {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.offcanvas .offcanvas-body .offCanvasItem .gioHang .soLuong span:first-child, .offcanvas .offcanvas-body .offCanvasItem .gioHang .soLuong span:last-child {
+  cursor: pointer;
+}
+.offcanvas .offcanvas-body .offCanvasItem .gioHang .imageProduct {
+  width: 100px;
+  height: 100px;
+}
+.offcanvas .offcanvas-body .offCanvasItem .gioHang .imageProduct img {
+  width: 100%;
+}
+.offcanvas .btnThanhToan {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.offcanvas .btnThanhToan .tongTien {
+  width: 100%;
+}
+.offcanvas .btnThanhToan .btnFunctionTongTien {
+  display: flex;
+  width: 100%;
+}
+.offcanvas .btnThanhToan .btnFunctionTongTien .btnTinhTien {
+  border-radius: 0;
+  background-color: #006BEA;
+  font-weight: 600;
+  color: #F5F4F6;
+  transition: all 0.5s;
+}
+.offcanvas .btnThanhToan .btnFunctionTongTien .btnTinhTien:hover {
+  background-color: #2567B8;
+  border-radius: 10px;
+}
+.offcanvas .btnThanhToan .btnFunctionTongTien .btnCancel {
+  border-radius: 0;
+  border: 2px solid white;
+  font-weight: 600;
+}
+.offcanvas .btnThanhToan .btnFunctionTongTien .btnCancel:hover {
+  border: 2px solid #FF7315;
+  color: #F21F41;
+  border-radius: 10px;
+}
+.offcanvas .btnThanhToan .btnFunctionTongTien .btnDelete {
+  background-color: #B02734;
+  border-radius: 0;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+.offcanvas .btnThanhToan .btnFunctionTongTien .btnDelete:hover {
+  background-color: #F21F41;
+  border-radius: 10px;
 }/*# sourceMappingURL=customer.css.map */

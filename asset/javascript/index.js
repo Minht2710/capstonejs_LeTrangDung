@@ -83,6 +83,7 @@ function renderListProduct(productArr) {
               <button class="btn btn-danger" onclick="deleteProduct('${item.id}')">Delete</button>
               <button class="btn btn-warning" onclick="editProduct('${item.id}')">Edit</button>
               <button class="btn btn-outline-success" onclick="importProductUICustomer('${item.id}')">Import</button>
+              <button class="btn btn-outline-success" onclick="deleteProductUICustomer('${item.id}')">Gỡ</button>
           </td>
       </tr>`;
     contentHTML += trString;
@@ -194,8 +195,8 @@ function deleteProduct(id) {
     method: "DELETE",
   })
     .then((res) => {
-      fetchListProduct();
-      alert("xóa thành công");
+      fetchListProduct()
+      alert("Đã xóa sản phẩm");
     })
     .catch((err) => {});
 }
@@ -293,7 +294,16 @@ function importProductToUserAPI(product) {
       console.log("Lỗi khi thêm vào giao diện người dùng:", error);
     });
 }
-
+function deleteProductUICustomer(id) {
+  axios({
+    url: `https://65b1f3e29bfb12f6eafc70fd.mockapi.io/user/${id}`,
+    method: "DELETE",
+  })
+    .then((res) => {
+      alert("Gỡ sản phẩm khỏi trang Samsung");
+    })
+    .catch((err) => {});
+}
 // đóng mở thẻ input
 function closeInput() {
   var closeInput = document.getElementById("inputProductInfo");

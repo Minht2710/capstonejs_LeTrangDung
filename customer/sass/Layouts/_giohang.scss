@@ -1,0 +1,79 @@
+.offcanvas {
+  .offcanvas-header {
+    .offcanvas-title {
+      font-weight: $fw-2;
+      text-transform: capitalize;
+    }
+  }
+  .offcanvas-body {
+    position: relative;
+    .offCanvasItem {
+      .gioHang {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .soLuong{
+          span{
+            &:first-child, 
+            &:last-child{
+              cursor: pointer;
+            }
+          }
+        }
+        .imageProduct {
+          width: 100px;
+          height: 100px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .btnThanhToan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .tongTien {
+      width: 100%;
+    }
+    .btnFunctionTongTien {
+      display: flex;
+      width: 100%;
+      .btnTinhTien {
+        border-radius: 0;
+        background-color: $color-succes;
+        font-weight: $fw-2;
+        color: $color-title-3;
+        transition: all 0.5s;
+        &:hover {
+          background-color: $color-succes-hover;
+          border-radius: 10px;
+        }
+      }
+      .btnCancel {
+        border-radius: 0;
+        border: 2px solid white;
+        font-weight: $fw-2;
+        &:hover {
+          border: 2px solid $color-hover-1;
+          color: $color-cancel-hover;
+          border-radius: 10px;
+        }
+      }
+      .btnDelete {
+        background-color: $color-cancel;
+        border-radius: 0;
+        color: $color-bg-8;
+        transition: all 0.5s;
+        &:hover {
+          background-color: $color-cancel-hover;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

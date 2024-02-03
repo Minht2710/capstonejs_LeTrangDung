@@ -20,7 +20,7 @@ function mapProductTypeToContainerId(productType) {
 function renderListProduct(productArr) {
   productArr.forEach(function (item) {
     // Chuyển đổi productType thành container ID
-    var containerId = mapProductTypeToContainerId(item.type);
+    var containerId = mapProductTypeToContainerId(item.productType);
 
     // Nếu không tìm thấy container, bỏ qua sản phẩm
     if (!containerId) {
@@ -28,11 +28,11 @@ function renderListProduct(productArr) {
       return;
     }
     var divString = `<div class="productItem col-3" id="${item.id}">
-    <img src="${item.image}" alt="" id="imageProduct">
+    <img src="${item.productImage}" alt="" id="imageProduct">
     <h4 id="productName">${item.productName}</h4>
     <div class="productItemPrice">
-    <p id="priceProduct">${item.price}</p>
-    <button class="btn btnAddToCart"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+    <p id="priceProduct">${item.productPrice}</p>
+    <button class="btn btnAddToCart"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" onclick="addToCart()">Thêm vào giỏ hàng</button>
     </div>
     
   </div>`;
@@ -48,7 +48,7 @@ function renderListProduct(productArr) {
 }
 
 axios({
-  url: "https://65b1f3e29bfb12f6eafc70fd.mockapi.io/product",
+  url: "https://65b1f3e29bfb12f6eafc70fd.mockapi.io/user",
   method: "GET",
 })
   .then(function (res) {

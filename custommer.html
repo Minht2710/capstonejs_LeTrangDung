@@ -99,7 +99,12 @@
             <!-- galaxy s24 introdution -->
             <div class="carousel-item active">
               <div class="bgCarousel">
-                <video class="background-video" id="background-video" autoplay muted>
+                <video
+                  class="background-video"
+                  id="background-video"
+                  autoplay
+                  muted
+                >
                   <source src="./customer/image/galaxys24ultra.mp4" />
                 </video>
                 <span class="progress-bar" id="progressBar"></span>
@@ -122,7 +127,12 @@
             <!-- galaxy z flip -->
             <div class="carousel-item">
               <div class="bgCarousel">
-                <video class="background-video" id="background-video" autoplay muted>
+                <video
+                  class="background-video"
+                  id="background-video"
+                  autoplay
+                  muted
+                >
                   <source
                     src="./customer/image/galaxy-tab-s9-display-pc.webm"
                   />
@@ -144,10 +154,10 @@
                     </div>
                     <p>
                       Hãy để trí tưởng tượng của bạn bay xa với các ứng dụng
-                      sáng tạo chuyên nghiệp như GoodNotes —được tối ưu hóa
-                      cho S Pen mang lại trải nghiệm liền mạch và cảm giác như
-                      viết trên giấy thực.26 Phác thảo trong chế độ xem dọc và
-                      chỉnh sửa trong chế độ xem ngang hoặc ngược lại.
+                      sáng tạo chuyên nghiệp như GoodNotes —được tối ưu hóa cho
+                      S Pen mang lại trải nghiệm liền mạch và cảm giác như viết
+                      trên giấy thực.26 Phác thảo trong chế độ xem dọc và chỉnh
+                      sửa trong chế độ xem ngang hoặc ngược lại.
                     </p>
                   </div>
                 </div>
@@ -156,7 +166,12 @@
             <!-- galaxy watch 6 -->
             <div class="carousel-item">
               <div class="bgCarousel">
-                <video class="background-video" id="background-video" autoplay muted>
+                <video
+                  class="background-video"
+                  id="background-video"
+                  autoplay
+                  muted
+                >
                   <source src="./customer/image/galaxy-watch6-screen-pc.webm" />
                 </video>
                 <span class="progress-bar" id="progressBar"></span>
@@ -220,6 +235,8 @@
       <!-- place footer here -->
     </footer>
     <!-- add to cart information  -->
+
+    <!-- GIỎ HÀNG -->
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
@@ -238,10 +255,25 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body" id="offCanvasBody">
-        <p>Try scrolling the rest of the page to see this option in action.</p>
+      <div class="offcanvas-body p-2" id="offCanvasBody">
+      </div>
+      <div class="btnThanhToan">
+        <div class="tongTien d-flex justify-content-between">
+          <h4>Tổng</h4>
+          <span id="tongTien"></span>
+        </div>
+        <div class="btnFunctionTongTien">
+          <button type="button" class="btn btnTinhTien col-5">
+            Thanh Toán
+          </button>
+          <button type="button" class="btn btnCancel col-5">Hủy</button>
+          <button type="button" class="btn btnDelete col-2" onclick="clearCart()">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
       </div>
     </div>
+    <button class="btn btnAddToCart btn-danger btnCart"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">GIỎ HÀNG </button>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
