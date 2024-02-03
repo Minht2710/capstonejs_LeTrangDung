@@ -72,31 +72,38 @@ function btnMemorySelected() {
 }
 
 var dssp = [];
-var dataJson2 = localStorage.getItem("DSSP");
-dssp = JSON.parse(dataJson2);
+var dataJson = localStorage.getItem("DSSP");
+dssp = JSON.parse(dataJson);
 
 renderListcart();
-totalPrice()
+totalPrice();
+addToCart();
 
-function removeItem(index) {
-  dssp.splice(index, 1); 
-  var dataJson = JSON.stringify(dssp);
-  localStorage.setItem("DSSP", dataJson);
-  renderListcart();
-  totalPrice()
+function Sanpham(productName, productPrice, productImage) {
+  this.productName = productName;
+  this.productPrice = productPrice;
+  this.productImage = productImage;
+}
+for (i = 0; i < arraySanpham.length; i++) {
+  var data = arraySanpham[i];
+  var sp = new Sanpham(
+    arraySanpham[i].productName,
+    arraySanpham[i].productPrice,
+    arraySanpham[i].productImage
+  );
+  dssp.push(sp);
 }
 // add to cart
-function addToCart() {
-  var productName = document.getElementById("productName").innerText;
-  var productPrice = document.getElementById("priceProduct").innerText;
-  var productImage = document.getElementById("imageProduct").src;
+function addToCart(button) {
+  var productName = button.parentElement.parentElement.querySelector("#productName").innerText;
+  var productPrice = button.parentElement.parentElement.querySelector("#priceProduct").innerText;
+  var productImage = button.parentElement.parentElement.querySelector("#imageProduct").src;
 
   // Tạo đối tượng sản phẩm
-  var product = {
+  var product = { 
     name: productName,
     price: productPrice,
     image: productImage,
-    quantity: 1
   };
   dssp.push(product);
   console.log(dssp);
@@ -104,7 +111,7 @@ function addToCart() {
   localStorage.setItem("DSSP", dataJson);
   localStorage.getItem("DSSP");
   renderListcart();
-  totalPrice()
+  totalPrice();
 }
 
 function renderListcart() {
@@ -144,51 +151,22 @@ function renderListcart() {
   document.getElementById("offCanvasBody").innerHTML = contentHTML;
 }
 
+function removeItem(index) {
+  dssp.splice(index, 1);
+  var dataJson = JSON.stringify(dssp);
+  localStorage.setItem("DSSP", dataJson);
+  renderListcart();
+  totalPrice();
+}
 // tăng/giảm số lượng sản phẩm
-document.addEventListener("DOMContentLoaded", function () {
-  // Lấy ra các phần tử cần thiết
-  var soLuongElement = document.getElementById("soLuong");
-  var chevronUpElement = document.getElementById("chevronUp");
-  var chevronDownElement = document.getElementById("chevronDown");
 
-  // Định nghĩa hàm tăng giảm giá trị
-  function updateSoLuong(index, increment) {
-    var currentValue = parseInt(soLuongElement.textContent);
-    var newValue = Math.max(currentValue + increment, 0);
-    soLuongElement.textContent = newValue;
-
-    // Cập nhật số lượng thực tế trong mảng dssp
-    dssp[index].quantity = newValue;
-
-    // Cập nhật lại giá trị tổng tiền
-    totalPrice();
-  }
-
-  chevronUpElement.addEventListener("click", function () {
-    updateSoLuong(0, 1);
-  });
-
-  chevronDownElement.addEventListener("click", function () {
-    updateSoLuong(0, -1);
-  });
-
-  function totalPrice() {
-    var totalPrice = 0;
-    for (var i = 0; i < dssp.length; i++) {
-      totalPrice += parseFloat(dssp[i].price) * dssp[i].quantity;
-    }
-    document.getElementById('tongTien').textContent = totalPrice;
-    console.log(totalPrice);
-  }
-
-});
 function totalPrice() {
   var totalPrice = 0;
   for (var i = 0; i < dssp.length; i++) {
-    totalPrice += parseFloat(dssp[i].price) * dssp[i].quantity;
+    totalPrice += parseFloat(dssp[i].price);
+    document.getElementById("tongTien").textContent = totalPrice;
+    console.log(totalPrice);
   }
-  document.getElementById('tongTien').textContent = totalPrice;
-  console.log(totalPrice);
 }
 function clearCart() {
   dssp = []; // Xóa toàn bộ sản phẩm khỏi mảng

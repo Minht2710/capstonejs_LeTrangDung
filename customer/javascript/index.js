@@ -32,7 +32,7 @@ function renderListProduct(productArr) {
     <h4 id="productName">${item.productName}</h4>
     <div class="productItemPrice">
     <p id="priceProduct">${item.productPrice}</p>
-    <button class="btn btnAddToCart"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" onclick="addToCart()">Thêm vào giỏ hàng</button>
+    <button class="btn btnAddToCart"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
     </div>
     
   </div>`;
